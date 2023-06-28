@@ -128,7 +128,6 @@ const App = () => {
   
     const postData = async () => {
       try {
-        console.log('ok');
         await fetch('/webhook/submit-test/', {
           method: 'POST',
           headers: {
@@ -137,12 +136,9 @@ const App = () => {
           },
           body: jsonData
         })
-          .then(response => response.json())
-          .then(data => {
-            console.log(data);
-          });
+        console.log('Postado');
       } catch (error) {
-        console.log(error, 'error data');
+        console.log(error);
       }
     };
   
